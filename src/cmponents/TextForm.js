@@ -6,7 +6,7 @@ export default function TextForm(props) {
         // console.log("UpperCase was Clicked" + text);
         let newText= text.toUpperCase();
         setText(newText)
-        props.showAlert("Converted to UpperCase", "success")
+        props.showAlert("Converted to UpperCase", "success");
     }
 
     const handleLowClick = () => {
@@ -58,7 +58,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear</button>
             </div>
             
-            <div className="container" my-3 style={{color: props.mode === 'dark' ? 'white':'black'}}>
+            <div className="container my-3" style={{color: props.mode === 'dark' ? 'white':'black'}}>
                 <h1>Your Text Summary</h1>
                 <p>Number of words: {text.split(" ").length} and Number of characters: {text.length}</p>
                 <p>Time to read one word is {0.008 * text.split(" ").length}</p>
