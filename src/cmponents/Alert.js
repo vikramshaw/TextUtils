@@ -11,8 +11,10 @@ function Alert(props) {
   return (
     // If props.alert is not null then evaluate the <div> part orelse don't evalute. Since props.alert is null so we are using this
     // props.alert &&
-    props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
-        <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
+    <div style={{height:'50px'}}>
+     { props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+          <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
+      </div>}
     </div>
   )
 }
