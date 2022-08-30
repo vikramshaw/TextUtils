@@ -5,10 +5,8 @@ import TextForm from './cmponents/TextForm';
 import React, {useState} from 'react';
 import Alert from './cmponents/Alert';
 import {
-  BrowserRouter as Router,
   Routes,
-  Route,
-  
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -41,7 +39,6 @@ function App() {
 
   return (
    <>
-    <Router>
       <Navbar title="TextUtils" about="About TextUtils" mode={mode} toggleMode={toggleMode}/>
       <Alert alert = {alert}/>
       <div className="container my-3">
@@ -50,7 +47,6 @@ function App() {
           <Route path = "/about" element = {<About mode={mode}/> } /> 
         </Routes>
       </div>
-    </Router>
    </>
   );
 }
